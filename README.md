@@ -154,15 +154,33 @@ VITE_API_URL=http://localhost:5000/api
 
 ## Screenshots
 
-Add screenshots here for:
+### Home Page
 
-- Home
-- Book Catalog
-- Book Details
-- Cart
-- Wishlist
-- My Orders
-- Admin Dashboard
+![BookHaven Home](./screenshots/home.png)
+
+### Book Catalog
+
+![Book Catalog](./screenshots/books.png)
+
+### Book Details
+
+![Book Details](./screenshots/book-details.png)
+
+### Shopping Cart
+
+![Shopping Cart](./screenshots/cart.png)
+
+### My Orders
+
+![My Orders](./screenshots/my-orders.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](./screenshots/admin-dashboard.png)
+
+### Admin Order Management
+
+![Admin Orders](./screenshots/admin-orders.png)
 
 ## Author
 
