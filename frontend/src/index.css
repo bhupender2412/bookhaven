@@ -1,0 +1,399 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------
+   Book Store Design System
+-------------------------------------------------- */
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #1c1917;
+
+  background: #f8f5ee;
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  --ink: #1c1917;
+  --ink-soft: #44403c;
+
+  --cream: #f8f5ee;
+  --cream-dark: #efe9dc;
+
+  --surface: #ffffff;
+
+  --gold: #d97706;
+  --gold-dark: #b45309;
+  --gold-soft: #fef3c7;
+
+  --navy: #172033;
+  --navy-light: #243047;
+
+  --muted: #78716c;
+
+  --border: #e7e0d4;
+
+  --success: #059669;
+  --danger: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: linear-gradient(180deg, #faf8f3 0%, #f6f1e8 100%);
+
+  color: var(--ink);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  color: #451a03;
+  background: #fde68a;
+}
+
+/* --------------------------------------------------
+   Scrollbar
+-------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ede5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9bda8;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a89980;
+}
+
+/* --------------------------------------------------
+   Layout
+-------------------------------------------------- */
+
+.page-shell {
+  min-height: calc(100vh - 72px);
+}
+
+.page-container {
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin-inline: auto;
+
+  padding: 40px 24px;
+}
+
+/* --------------------------------------------------
+   Typography
+-------------------------------------------------- */
+
+.eyebrow {
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--gold-dark);
+}
+
+.page-title {
+  margin-top: 8px;
+
+  font-size: clamp(2.1rem, 5vw, 3.25rem);
+
+  line-height: 1.05;
+
+  font-weight: 850;
+
+  letter-spacing: -0.045em;
+
+  color: var(--ink);
+}
+
+.page-subtitle {
+  margin-top: 14px;
+
+  max-width: 680px;
+
+  line-height: 1.8;
+
+  color: var(--muted);
+}
+
+/* --------------------------------------------------
+   Cards
+-------------------------------------------------- */
+
+.store-card {
+  border: 1px solid var(--border);
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow: 0 6px 20px rgba(41, 37, 36, 0.06);
+}
+
+.store-card-hover {
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+}
+
+.store-card-hover:hover {
+  transform: translateY(-2px);
+
+  border-color: #d6c6aa;
+
+  box-shadow: 0 10px 26px rgba(41, 37, 36, 0.1);
+}
+
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 11px 18px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #d97706, #b45309);
+
+  box-shadow: 0 5px 14px rgba(180, 83, 9, 0.18);
+
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(180, 83, 9, 0.24);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.55;
+}
+
+.btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid #d6c6aa;
+
+  border-radius: 12px;
+
+  padding: 10px 17px;
+
+  font-weight: 700;
+
+  color: #57534e;
+
+  background: white;
+
+  transition:
+    background 140ms ease,
+    border-color 140ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: #b45309;
+  background: #fffbeb;
+}
+
+/* --------------------------------------------------
+   Forms
+-------------------------------------------------- */
+
+.form-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 0.875rem;
+
+  font-weight: 700;
+
+  color: #44403c;
+}
+
+.form-input {
+  width: 100%;
+
+  border: 1px solid #d6d3d1;
+
+  border-radius: 12px;
+
+  padding: 12px 14px;
+
+  outline: none;
+
+  color: #1c1917;
+
+  background: white;
+
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.form-input::placeholder {
+  color: #a8a29e;
+}
+
+.form-input:focus {
+  border-color: #d97706;
+
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+/* --------------------------------------------------
+   Alerts
+-------------------------------------------------- */
+
+.alert-success {
+  border: 1px solid #a7f3d0;
+
+  border-radius: 12px;
+
+  padding: 12px 16px;
+
+  color: #065f46;
+
+  background: #ecfdf5;
+}
+
+.alert-error {
+  border: 1px solid #fecaca;
+
+  border-radius: 12px;
+
+  padding: 12px 16px;
+
+  color: #b91c1c;
+
+  background: #fef2f2;
+}
+
+/* --------------------------------------------------
+   Hero
+-------------------------------------------------- */
+
+.hero-panel {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  color: white;
+
+  background: linear-gradient(135deg, #172033, #243047 62%, #3d2c1e);
+
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.18);
+}
+
+/* --------------------------------------------------
+   Empty State
+-------------------------------------------------- */
+
+.empty-state {
+  border: 1px dashed #d6c6aa;
+
+  border-radius: 18px;
+
+  padding: 42px 24px;
+
+  text-align: center;
+
+  background: #fffdf8;
+}
+
+/* --------------------------------------------------
+   Responsive
+-------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .page-container {
+    padding: 28px 16px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
